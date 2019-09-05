@@ -2,5 +2,11 @@
   "name": "json-to-graphql-schema",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^14.5.4",
+    "graphql-compose": "^7.3.0",
+    "graphql-compose-json": "^4.1.1",
+    "yargs": "^14.0.0"
+  }
 }
