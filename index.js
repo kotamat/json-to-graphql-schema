@@ -1,6 +1,6 @@
 const { composeWithJson } = require('graphql-compose-json');
 const { schemaComposer } = require('graphql-compose');
-const { printSchema } = require('graphql'); // CommonJS
+const { printSchema } = require('graphql');
 const argv = require('yargs')
 .options({
     input:{
@@ -24,7 +24,6 @@ const argv = require('yargs')
 const json = require(argv.input);
 
 const GqlType = composeWithJson(argv.name, json);
-const GraphQLType = GqlType.getType();
 schemaComposer.Query.addFields({
   [argv.key]: {
     type: GqlType,
